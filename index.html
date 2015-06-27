@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
   
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
 </head>
 <body ng-app="ciceroneApp">
 	<div class="container" >
@@ -22,7 +21,7 @@
 			<div class="col-md-10" ng-controller="CitiesController">
 				<h1>Plan your trip in:</h1>
 				<ul>
-					<li ng-repeat="city in cities">
+					<li ng-repeat="city in cities" class="ng-class:city.enabled">
 				    	{{city.name}}
 					</li>
 				</ul>
@@ -34,6 +33,6 @@
 		</div>
 	</div>
 	<!-- AngularJS Scripts -->
-	<script src="js/ciceroneApp.js" />
+	<script src="js/ciceroneApp.js"></script>
 </body>
 </html>
