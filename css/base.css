@@ -1,0 +1,9 @@
+.background {
+    background-color:#202020;
+}
+.columns {
+    margin: 30px 10px;
+    border-radius: 4px;
+    background-color: #006666;
+    padding: 15px;
+}
