@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
   	<title>Dest Hack</title>
@@ -7,11 +7,12 @@
 	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<link rel="stylesheet"  type="text/css" href="css/base.css">
 </head>
-<body class="background">
+<body class="background"  ng-app="ciceroneApp">
 	<div class="container">
 		<div class="row">
 			Destination Hack
@@ -20,13 +21,12 @@
 			<div class="col-md-2">
 				
 			</div>
-			<div class="col-md-8 columns">
+			<div class="col-md-8 columns" ng-controller="CitiesController">
 				<h1>Plan your trip in:</h1>
 				<div class="col-md-12 btn-group-vertical btn-group-lg" role="group">
-					<button type="button" class="btn btn-default">London</button>
-					<button type="button" class="btn btn-default">London</button>
-					<button type="button" class="btn btn-default">London</button>
-					<button type="button" class="btn btn-default">London</button>
+					<button type="button" class="btn btn-default" ng-repeat="city in cities">
+						{{city.name}}
+					</button>
 				</div>
 			</div>
 			<div class="col-md-2">
@@ -34,5 +34,7 @@
 			</div>
 		</div>
 	</div>
+	<!-- AngularJS Scripts -->
+	<script src="js/ciceroneApp.js" />
 </body>
 </html>
