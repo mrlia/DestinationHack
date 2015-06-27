@@ -1,0 +1,8 @@
+<div id="attractions" class="columns" ng-class="{hidden: initial, 'col-md-2': attractionsSelected, 'col-md-8': citySelected}" >
+	<h1>Select attractions:</h1>
+	<div class="col-md-12 btn-group-vertical btn-group-lg" role="group">
+		<button ng-click="selectAttractions()" type="button" class="btn btn-default" ng-repeat="attraction in attractions">
+			{{attraction.name}}
+		</button>
+	</div>
+</div>

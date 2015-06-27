@@ -1,0 +1,8 @@
+<div id="cities" class="columns" ng-class="{'col-md-8': initial, 'col-md-2': citySelected, 'hidden': attractionsSelected}">
+	<h1>Plan your trip in:</h1>
+	<div class="col-md-12 btn-group-vertical btn-group-lg" role="group">
+		<button ng-click="selectCity()" type="button" class="btn btn-default" ng-repeat="city in cities">
+			{{city.name}}
+		</button>
+	</div>
+</div>
