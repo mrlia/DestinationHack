@@ -14,8 +14,25 @@ ciceroneApp.controller('CitiesController', ['$scope', function($scope) {
         {name:'London Eye', enabled:false}
     ];
 
-    $scope.leftColumn = true;
-    $scope.toggle = function () {
-    	$scope.leftColumn = !$scope.leftColumn;
-    };
+    $scope.initial = true;
+    $scope.citySelected = false;
+    $scope.attractionsSelected = false;
+
+    $scope.setInitial = function () {
+		$scope.initial = true;
+	    $scope.citySelected = false;
+	    $scope.attractionsSelected = false;    	
+    }
+
+    $scope.selectCity = function () {
+		$scope.initial = false;
+	    $scope.citySelected = true;
+	    $scope.attractionsSelected = false;    	
+    }
+
+    $scope.selectAttractions = function () {
+		$scope.initial = false;
+	    $scope.citySelected = false;
+	    $scope.attractionsSelected = true;    	
+    }
 }]);
